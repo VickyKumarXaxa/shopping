@@ -17,14 +17,22 @@ class _ProductDetailsState extends State<ProductDetails> {
       appBar: AppBar(
         title: const Text('Product Page'),
       ),
-      body: Container(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: <Widget>[
-            Text('Title'),
-            Text('Product Details'),
-          ],
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Expanded(
+            child: Container(
+              constraints: const BoxConstraints.tightFor(height: 170),
+              child: Image.network(
+                'https://cdn-images-1.medium.com/max/2000/1*vdJuSUKWl_SA9Lp-32ebnA.jpeg',
+                fit: BoxFit.fitWidth,
+              ),
+            ),
+          ),
+          const Text('Title'),
+          const Text('Product Details'),
+        ],
       ),
     );
   }
