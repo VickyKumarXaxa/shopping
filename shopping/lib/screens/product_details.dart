@@ -30,6 +30,18 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
             ),
           ),
+          ElevatedButton(
+              onPressed: () {},
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const <Widget>[
+                  Text('Add Trip'),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Icon(Icons.shopping_cart),
+                ],
+              )),
           const Text('Title'),
           const Text('Product Details'),
         ],
